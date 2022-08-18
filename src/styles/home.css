@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Germania+One&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+}
+
+html {
+    color: white;
+    font-family: "Germania One", cursive;
+}
+
+#content {
+    background-image: url(../assets/images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+}
+
+#nav-container {
+    text-shadow: 0px 0px 6px rgba(112, 112, 112, 0.7);
+    padding: 12px 0px;
+
+    border-bottom: 2px solid #151a1e;
+    box-shadow: 0px 0px 6px rgba(187, 33, 42, 0.8);
+    background-color: rgba(238, 36, 60, 0.03);
+}
+
+#nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+#nav-list > * {
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    -webkit-text-stroke: 0.9px black;
+    line-height: 1;
+    transition: transform 200ms, background 200ms;
+}
+
+#nav-list > *:hover {
+    transform: translateY(-2px);
+}
+
+#footer {
+    border-top: 2px solid #151a1e;
+    box-shadow: 0px 0px 6px rgba(187, 33, 42, 0.8);
+    background-color: rgba(238, 36, 60, 0.03);
+
+    padding: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    -webkit-text-stroke: 0.9px black;
+    line-height: 1;
+    text-shadow: 0px 0px 6px rgba(112, 112, 112, 0.7);
+}
+
+#footer > a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+    -webkit-text-stroke: 0.9px black;
+}
+
+#footer > a:visited {
+    color: white;
+}
+
+/* home page*/
+
+#home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+#home-icon {
+    height: 50vh;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+    #home-icon {
+        height: 70vh;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #home-icon {
+        height: 80vh;
+    }
+}

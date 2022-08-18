@@ -1,0 +1,103 @@
+#contact-container {
+    background-color: rgba(0, 0, 0, 0.96);
+    color: white;
+    padding: 30px 25px;
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-title {
+    margin-bottom: 40px;
+    font-size: 3rem;
+}
+
+#contact-form {
+    width: 55%;
+    flex: 1 1 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "firstName lastName"
+        "phone email"
+        "message message"
+        "message message"
+        ". ."
+        ". ."
+        ". submit";
+}
+
+#first-name {
+    grid-area: firstName;
+}
+
+#last-name {
+    grid-area: lastName;
+}
+
+#phone-number {
+    grid-area: phone;
+}
+
+#email {
+    grid-area: email;
+}
+
+#message-input {
+    grid-area: message;
+}
+
+#submit-button {
+    grid-area: submit;
+
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #b7303d;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(122 18 45 / 39%);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#submit-button:hover {
+    background: rgba(183, 48, 61, 0.9);
+    box-shadow: 0 6px 20px rgb(122 18 45 / 23%);
+}
+
+form > input,
+form > textarea {
+    text-align: left;
+    padding: 6px;
+}
+
+@media screen and (max-width: 620px) {
+    #contact-form {
+        gap: 36px;
+
+        grid-template-areas:
+            "firstName"
+            "lastName"
+            "phone"
+            "email"
+            "message"
+            "message"
+            "."
+            "."
+            "submit";
+    }
+
+    form > input,
+    form > textarea {
+        text-align: left;
+        padding: 5px;
+    }
+}
